@@ -21,7 +21,7 @@ answer = []
 total = len(genome) - L +1
 for i in range(len(genome) - L +1):
     Fw = FrequentWords(genome[i:i+L], k, t) #Added t to parameter to make it only return substrings larger than t as well
-    answer += Fw 
+    answer = answer + Fw
     print(i, "out of ", total)
     
 print(list(set(answer))) # Remove duplicates
